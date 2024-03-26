@@ -1,231 +1,190 @@
-
-<p align="center">
-    <a href="https://www.fusio-project.org/" target="_blank"><img src="https://www.fusio-project.org/img/fusio_64px.png"></a>
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p align="center" dir="auto">
+    <a href="https://www.fusio-project.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/149f4d8e7200702540e275e097d1e6c9746f0cdebfe54c4f2fae190336473f65/68747470733a2f2f7777772e667573696f2d70726f6a6563742e6f72672f696d672f667573696f5f363470782e706e67" data-canonical-src="https://www.fusio-project.org/img/fusio_64px.png" style="max-width: 100%;"></a>
 </p>
-
-# About
-
-Fusio is an open source API management platform which helps to create innovative API solutions.
-
-## Use-Cases
-
-* __API-Product__  
-  Fusio helps you to create a great API product, besides building an API it provides a developer portal where developers
-  can register and a way to monetize your API
-* __API-Gateway__  
-  Fusio can be used as gateway to your internal API and microservices. It handles all common features like
-  Authorization, Rate-Limiting and Schema-Validation
-* __SPA-Backend__  
-  Fusio can be used as backend to build SPAs using popular Javascript-Frameworks like i.e. Angular, React or Vue. It
-  provides a powerful code generator which can automatically generate an SDK for your API
-* __Low-Code-Platform__  
-  Fusio allows you to build API endpoints without coding knowledge. I.e. it provides an Entity generator which you can
-  use to easily create complete CRUD APIs.
-* __API-Framework__  
-  For more complex use cases you can use Fusio also as framework to build complete APIs from scratch. This means you
-  build custom actions where you can use the wide PHP ecosystem to solve your task.
-
-## Features
-
-Fusio helps you to build APIs providing out-of-the-box enterprise features so that you can concentrate on your business
-case. Please take a look at our [documentation website](https://docs.fusio-project.org/)
-for more information. The following feature list gives you a first overview:
-
-* __OpenAPI generation__  
-  Fusio generates automatically an OpenAPI specification for the defined routes
-* __SDK generation__  
-  Fusio can automatically generate a client SDK for your API based on the defined schema
-* __Subscription support__  
-  Fusio contains a event subscription layer which helps to build pub/sub for your API
-* __Rate limiting__  
-  Fusio provides a way to rate limit requests based on the user or app
-* __Authorization__  
-  Fusio uses OAuth2 for API authorization
-* __Monetization__  
-  Fusio provides a simple payment system to charge for specific routes
-* __Validation__  
-  Fusio uses the TypeSchema to automatically validate incoming request data
-* __Analytics__  
-  Fusio monitors all API activities and shows them on a dashboard
-* __User management__  
-  Fusio provides a developer app where new users can login or register a new account through GitHub, Google, Facebook or
-  through normal email registration
-
-# Apps
-
-Since it is difficult to work with an API only app Fusio provides apps which help to work with the API. Mostly apps are
-simple JS apps, which work with the internal API of Fusio. You can see a list of all available apps at our
-[marketplace](https://www.fusio-project.org/marketplace). You can install such an app either through a CLI command i.e.
-`php bin/fusio marketplace:install fusio` or through the backend app.
-
-All apps are installed to the `apps/` folder. You need to tell Fusio the public url to the apps folder at the `.env`
-file by defining the `APP_APPS_URL` variable. Depending on your setup this can be either a custom sub-domain like
-`https://apps.acme.com` or simply the sub folder `https://acme.com/apps`.
-
-## Backend
-
-![Backend](https://www.fusio-project.org/media/backend/dashboard.png)
-
-The backend app is the main app to configure and manage your API. The installer automatically installs this app. The app
-is located at `/apps/fusio/`.
-
-## VSCode
-
-Fusio provides a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=Fusio.fusio)
-which can be used to simplify action development. This means you can develop every action directly inside
-the VSCode editor.
-
-# SDK
-
-To build and integrate apps with Fusio we provide several SDKs which you can use to work with a Fusio instance or you
-can also simply manually talk to the REST API.
-
-* Javascript  
-  * [GitHub](https://github.com/apioo/fusio-sdk-javascript)  
-  * [NPM](https://www.npmjs.com/package/fusio-sdk)  
-* Javascript-Angular  
-  * [GitHub](https://github.com/apioo/fusio-sdk-javascript-angular)  
-  * [NPM](https://www.npmjs.com/package/ngx-fusio-sdk)  
-* PHP  
-  * [GitHub](https://github.com/apioo/fusio-sdk-php)  
-  * [Packageist](https://packagist.org/packages/fusio/sdk)  
-* Java  
-  * [GitHub](https://github.com/apioo/fusio-sdk-java)  
-  * [Package](https://mvnrepository.com/artifact/org.fusio-project/sdk)  
-* Go  
-  * [GitHub](https://github.com/apioo/fusio-sdk-go)  
-* REST API
-  * [Backend](https://www.fusio-project.org/api/backend)  
-  * [Consumer](https://www.fusio-project.org/api/consumer)  
-  * [System](https://www.fusio-project.org/api/system)  
-
-# Ecosystem
-
-Fusio is an open source project which you can use freely for private and commercial projects under the terms of the
-Apache 2.0 license. Besides our core product we offer additional services to augment the functionality of Fusio.
-
-* [TypeAPI](https://typeapi.org/)  
-  An OpenAPI alternative to describe REST APIs for type-safe code generation.
-* [TypeSchema](https://typeschema.org/)  
-  A JSON format to describe data models in a language neutral format.
-* [TypeHub](https://typehub.cloud/)  
-  A collaborative platform to design and build API models and client SDKs.
-* [SDKgen](https://sdkgen.app/)  
-  SDKgen is a powerful code generator to automatically build client SDKs for your REST API.
-* [APIgen](https://apigen.app/)  
-  Generate fully working and customizable APIs based on your data model.
-* [PSX](https://phpsx.org/)  
-  An innovative PHP framework dedicated to build fully typed REST APIs.
-
-# Installation
-
-It is possible to install Fusio either through composer or manually file download.
-
-## Composer
-
-```
-composer create-project fusio/fusio
-```
-
-## Download
-
-https://github.com/apioo/fusio/releases
-
-## Configuration
-
-You can either manually install Fusio with the steps below or you can also use the browser based installer at
-`public/install.php`. Note because of security reasons it is highly recommended removing the installer script after the
-installation.
-
-* __Adjust the configuration file__  
-  Open the file `.env` in the Fusio directory and change the `APP_URL` to the domain pointing to the public folder.
-  Also insert the database credentials to the `APP_CONNECTION` keys. Optional adjust `APP_APPS_URL` to the public url
-  of the apps folder (in case you want to use apps).
-* __Execute the installation command__  
-  The installation script inserts the Fusio database schema into the provided database. It can be executed with the
-  following command `php bin/fusio migrate`.
-* __Create administrator user__  
-  After the installation is complete you have to create a new administrator account. Therefor you can use the following
-  command `php bin/fusio adduser`. Choose as account type "Administrator".
-* __Install backend app__  
-  To manage your API through an admin panel you need to install the backend app. The app can be installed with the
-  following command `php bin/fusio marketplace:install fusio`
-
-You can verify the installation by visiting the `APP_URL` with a browser. You should see an API response that the
-installation was successful.
-
-In case you want to install Fusio on a specific database you need to adjust the `APP_CONNECTION` parameter. You can
-use the following connection strings:
-
-* MySQL: `pdo-mysql://root:test1234@localhost/fusio`
-* PostgreSQL: `pdo-pgsql://postgres:postgres@localhost/fusio`
-* SQLite: `pdo-sqlite:///fusio.sqlite`
-
-In general it is possible to install Fusio on all database which are [supported](https://www.doctrine-project.org/projects/doctrine-dbal/en/current/reference/configuration.html#driver)
-by our database abstraction layer but our internal test cases are only covering MySQL, PostgreSQL and SQLite so there is
-no guarantee that everything works.
-
-## Docker
-
-It is possible to setup Fusio through docker. This has the advantage that you automatically get a complete running Fusio
-system without configuration. This is especially great for testing and evaluation. To setup the container you have to
-checkout the [repository](https://github.com/apioo/fusio-docker) and run the following command:
-
-```
-docker-compose up -d
-```
-
-This builds the Fusio system with a predefined backend account. The credentials are taken from the env variables
-`FUSIO_BACKEND_USER`, `FUSIO_BACKEND_EMAIL` and `FUSIO_BACKEND_PW` in the `docker-compose.yml`. If you are planing to
-run the container on the internet you must change these credentials.
-
-## Domains
-
-By default the complete Fusio project can be hosted on a single domain. In this setup your API is served at the root
-directory and the developer portal and backend apps are directly served from the /apps folder. This setup is easy to use
-since it requires no configuration. If you want to run Fusio in a production environment we recommend to create the
-following sub-domain structure:
-
-* __api.acme.com__  
-  Contains only Fusio where your API is served, in this case you can delete the apps/ folder from the public/ folder
-* __developer.acme.com__  
-  Contains the developer portal app where external developers can register 
-* __fusio.acme.com__  
-  Optional the backend app where you can manage your Fusio instance. You can host this also on a complete separate
-  internal domain, the backend app only needs access to the Fusio API.
-
-This is of course only a suggestion and you are free to choose the domain names how you like.
-
-# Documentation
-
-Please check out our official documentation website where we bundle all documentation resources:
-https://docs.fusio-project.org/
-
-# Support
-
-## Promotion
-
-If you are a blogger or magazine we would be happy if you like to cover Fusio. Please take a look at the Media section
-of our [About Page](https://www.fusio-project.org/about) to download the official icon set. In case you have any
-questions please write us a message directly so we can help you to create great content.
-
-## Consulting
-
-If you are a company or freelancer and want to get detailed information how you can use Fusio you can contact us for
-consulting. In the workshop we try to find the best way how you can use/integrate Fusio also we try to explain the
-functionality and answer your questions.
-
-## Donations
-
-If this project helps you to generate revenue or in general if you like to support the project please check out the
-donation options at our repository.
-
-## Partner
-
-The following list shows all partners of the Fusio project. We like to thank every partner supporting us in our vision
-to move API development to the next level. If you are interested in getting listed here feel free to sponsor our
-project.
-
-<a href="https://jb.gg/OpenSourceSupport">
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg">
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于</font></font></h1><a id="user-content-about" class="anchor" aria-label="永久链接：关于" href="#about"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fusio 是一个开源 API 管理平台，有助于创建创新的 API 解决方案。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用例</font></font></h2><a id="user-content-use-cases" class="anchor" aria-label="永久链接：用例" href="#use-cases"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">API-Product</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+Fusio 可帮助您创建出色的 API 产品，除了构建 API 之外，它还提供开发人员门户，开发人员可以在其中注册以及通过 API 获利的方式</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">API-Gateway</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+Fusio 可用作内部 API 和微服务的网关。</font><font style="vertical-align: inherit;">它处理所有常见功能，如授权、速率限制和模式验证</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SPA 后端</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 可以用作后端，使用流行的 Javascript 框架（例如 Angular、React 或 Vue）构建 SPA。</font><font style="vertical-align: inherit;">它提供了一个强大的代码生成器，可以自动为您的API生成SDK</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">低代码平台</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 允许您在无需编码知识的情况下构建 API 端点。</font><font style="vertical-align: inherit;">即它提供了一个实体生成器，您可以使用它轻松创建完整的 CRUD API。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">API 框架</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+对于更复杂的用例，您还可以使用 Fusio 作为框架从头开始构建完整的 API。</font><font style="vertical-align: inherit;">这意味着您可以构建自定义操作，在其中可以使用广泛的 PHP 生态系统来解决您的任务。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">特征</font></font></h2><a id="user-content-features" class="anchor" aria-label="永久链接：特点" href="#features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fusio 可帮助您构建提供开箱即用的企业功能的 API，以便您可以专注于您的业务案例。</font><font style="vertical-align: inherit;">请查看我们的</font></font><a href="https://docs.fusio-project.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+以获取更多信息。</font><font style="vertical-align: inherit;">以下功能列表为您提供了初步概述：</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenAPI 生成</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 自动为定义的路由生成 OpenAPI 规范</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SDK 生成</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 可以根据定义的架构自动为您的 API 生成客户端 SDK</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订阅支持</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 包含一个事件订阅层，有助于为您的 API 构建发布/订阅</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">速率限制</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 提供了一种根据用户或应用程序对请求进行速率限制的方法</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">授权</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio使用OAuth2进行API授权</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">货币化</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 提供了一个简单的支付系统来对特定路线进行收费</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">验证</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 使用 TypeSchema 自动验证传入的请求数据</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分析</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 监控所有 API 活动并将其显示在仪表板上</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户管理</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Fusio 提供了一个开发者应用程序，新用户可以通过 GitHub、Google、Facebook 或通过普通电子邮件注册登录或注册新帐户</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用</font></font></h1><a id="user-content-apps" class="anchor" aria-label="永久链接：应用程序" href="#apps"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">由于使用 API 很困难，因此只有应用程序 Fusio 提供了有助于使用 API 的应用程序。</font><font style="vertical-align: inherit;">大多数应用程序都是简单的 JS 应用程序，它们与 Fusio 的内部 API 配合使用。</font></font><a href="https://www.fusio-project.org/marketplace" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以在我们的市场</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上查看所有可用应用程序的列表
+</font><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">您可以通过 CLI 命令 ie
+</font></font><code>php bin/fusio marketplace:install fusio</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或通过后端应用程序安装此类应用程序。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有应用程序都安装到该</font></font><code>apps/</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件夹&ZeroWidthSpace;&ZeroWidthSpace;中。</font><font style="vertical-align: inherit;">您需要</font></font><code>.env</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+通过定义</font></font><code>APP_APPS_URL</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">变量来告诉 Fusio 文件中 apps 文件夹的公共 url。</font><font style="vertical-align: inherit;">根据您的设置，这可以是自定义子域（例如）
+ </font></font><code>https://apps.acme.com</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，也可以只是子文件夹</font></font><code>https://acme.com/apps</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">后端</font></font></h2><a id="user-content-backend" class="anchor" aria-label="永久链接：后端" href="#backend"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6264535ca0d62eb52ef38d943ef91544f87021e9e5e23d0fc9b9f69d7ec415ee/68747470733a2f2f7777772e667573696f2d70726f6a6563742e6f72672f6d656469612f6261636b656e642f64617368626f6172642e706e67"><img src="https://camo.githubusercontent.com/6264535ca0d62eb52ef38d943ef91544f87021e9e5e23d0fc9b9f69d7ec415ee/68747470733a2f2f7777772e667573696f2d70726f6a6563742e6f72672f6d656469612f6261636b656e642f64617368626f6172642e706e67" alt="后端" data-canonical-src="https://www.fusio-project.org/media/backend/dashboard.png" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">后端应用程序是配置和管理 API 的主要应用程序。</font><font style="vertical-align: inherit;">安装程序会自动安装此应用程序。</font><font style="vertical-align: inherit;">该应用程序位于</font></font><code>/apps/fusio/</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VS代码</font></font></h2><a id="user-content-vscode" class="anchor" aria-label="永久链接：VSCode" href="#vscode"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fusio 提供了</font></font><a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VSCode 扩展</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+，可用于简化动作开发。</font><font style="vertical-align: inherit;">这意味着您可以直接在 VSCode 编辑器中开发每个操作。</font></font></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">软件开发工具包</font></font></h1><a id="user-content-sdk" class="anchor" aria-label="永久链接：SDK" href="#sdk"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了使用 Fusio 构建和集成应用程序，我们提供了多个 SDK，您可以使用它们来处理 Fusio 实例，也可以简单地手动与 REST API 对话。</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaScript
+</font></font><ul dir="auto">
+<li><a href="https://github.com/apioo/fusio-sdk-javascript"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a></li>
+<li><a href="https://www.npmjs.com/package/fusio-sdk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">国家公共管理</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Javascript-Angular
+</font></font><ul dir="auto">
+<li><a href="https://github.com/apioo/fusio-sdk-javascript-angular"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a></li>
+<li><a href="https://www.npmjs.com/package/ngx-fusio-sdk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">国家公共管理</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PHP
+</font></font><ul dir="auto">
+<li><a href="https://github.com/apioo/fusio-sdk-php"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a></li>
+<li><a href="https://packagist.org/packages/fusio/sdk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包装主义者</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爪哇
+</font></font><ul dir="auto">
+<li><a href="https://github.com/apioo/fusio-sdk-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a></li>
+<li><a href="https://mvnrepository.com/artifact/org.fusio-project/sdk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包裹</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">去
+</font></font><ul dir="auto">
+<li><a href="https://github.com/apioo/fusio-sdk-go"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">休息API
+</font></font><ul dir="auto">
+<li><a href="https://www.fusio-project.org/api/backend" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">后端</font></font></a></li>
+<li><a href="https://www.fusio-project.org/api/consumer" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">消费者</font></font></a></li>
+<li><a href="https://www.fusio-project.org/api/system" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">系统</font></font></a></li>
+</ul>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生态系统</font></font></h1><a id="user-content-ecosystem" class="anchor" aria-label="永久链接：生态系统" href="#ecosystem"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fusio 是一个开源项目，您可以根据 Apache 2.0 许可证条款免费将其用于私人和商业项目。</font><font style="vertical-align: inherit;">除了我们的核心产品之外，我们还提供附加服务来增强 Fusio 的功能。</font></font></p>
+<ul dir="auto">
+<li><a href="https://typeapi.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TypeAPI</font></font></a><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+一种 OpenAPI 替代方案，用于描述用于类型安全代码生成的 REST API。</font></font></li>
+<li><a href="https://typeschema.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TypeSchema</font></font></a><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+一种 JSON 格式，以语言中性格式描述数据模型。</font></font></li>
+<li><a href="https://typehub.cloud/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TypeHub</font></font></a><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+一个用于设计和构建 API 模型和客户端 SDK 的协作平台。</font></font></li>
+<li><a href="https://sdkgen.app/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SDKgen</font></font></a><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+SDKgen 是一个功能强大的代码生成器，可以自动为您的 REST API 构建客户端 SDK。</font></font></li>
+<li><a href="https://apigen.app/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">APIgen</font></font></a><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+根据您的数据模型生成完全可用且可自定义的 API。</font></font></li>
+<li><a href="https://phpsx.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PSX</font></font></a><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+一个创新的 PHP 框架，致力于构建完全类型化的 REST API。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h1><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以通过 Composer 或手动文件下载来安装 Fusio。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作曲家</font></font></h2><a id="user-content-composer" class="anchor" aria-label="永久链接：作曲家" href="#composer"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>composer create-project fusio/fusio
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="composer create-project fusio/fusio" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></h2><a id="user-content-download" class="anchor" aria-label="永久链接： 下载" href="#download"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/apioo/fusio/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/apioo/fusio/releases</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></h2><a id="user-content-configuration" class="anchor" aria-label="永久链接：配置" href="#configuration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以按照以下步骤手动安装 Fusio，也可以使用基于浏览器的安装程序（位于 ）
+ </font></font><code>public/install.php</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">请注意，出于安全原因，强烈建议在安装后删除安装程序脚本。</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">调整配置文件</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打开Fusio目录中的</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+文件，并将其更改</font><font style="vertical-align: inherit;">为指向公共文件夹的域。</font><font style="vertical-align: inherit;">还将数据库凭据插入到</font><font style="vertical-align: inherit;">密钥中。</font><font style="vertical-align: inherit;">可选调整</font><font style="vertical-align: inherit;">应用程序文件夹的公共 URL（如果您想使用应用程序）。</font></font><code>.env</code><font style="vertical-align: inherit;"></font><code>APP_URL</code><font style="vertical-align: inherit;"></font><code>APP_CONNECTION</code><font style="vertical-align: inherit;"></font><code>APP_APPS_URL</code><font style="vertical-align: inherit;"></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执行安装命令</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+安装脚本将 Fusio 数据库架构插入到提供的数据库中。</font><font style="vertical-align: inherit;">可以使用以下命令来执行</font></font><code>php bin/fusio migrate</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">创建管理员用户</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+安装完成后，您必须创建一个新的管理员帐户。</font><font style="vertical-align: inherit;">因此您可以使用以下命令</font></font><code>php bin/fusio adduser</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">选择帐户类型“管理员”。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装后端应用程序</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+要通过管理面板管理您的 API，您需要安装后端应用程序。</font><font style="vertical-align: inherit;">可以使用以下命令安装该应用程序</font></font><code>php bin/fusio marketplace:install fusio</code></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以通过使用浏览器访问来验证安装</font></font><code>APP_URL</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">您应该看到安装成功的 API 响应。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想在特定数据库上安装 Fusio，则需要调整</font></font><code>APP_CONNECTION</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参数。</font><font style="vertical-align: inherit;">您可以使用以下连接字符串：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MySQL：</font></font><code>pdo-mysql://root:test1234@localhost/fusio</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PostgreSQL：</font></font><code>pdo-pgsql://postgres:postgres@localhost/fusio</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SQLite：</font></font><code>pdo-sqlite:///fusio.sqlite</code></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一般来说，可以在我们的数据库抽象层</font></font><a href="https://www.doctrine-project.org/projects/doctrine-dbal/en/current/reference/configuration.html#driver" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的所有数据库上安装 Fusio 
+，但我们的内部测试用例仅涵盖 MySQL、PostgreSQL 和 SQLite，因此不能保证一切正常。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">码头工人</font></font></h2><a id="user-content-docker" class="anchor" aria-label="永久链接：Docker" href="#docker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以通过 docker 设置 Fusio。</font><font style="vertical-align: inherit;">这样做的优点是您无需配置即可自动获得完整运行的 Fusio 系统。</font><font style="vertical-align: inherit;">这对于测试和评估尤其有用。</font><font style="vertical-align: inherit;">要设置容器，您必须签出</font></font><a href="https://github.com/apioo/fusio-docker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">存储库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">并运行以下命令：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>docker-compose up -d
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="docker-compose up -d" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这将使用预定义的后端帐户构建 Fusio 系统。</font><font style="vertical-align: inherit;">凭据取自环境变量
+</font></font><code>FUSIO_BACKEND_USER</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><code>FUSIO_BACKEND_EMAIL</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">并</font></font><code>FUSIO_BACKEND_PW</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在</font></font><code>docker-compose.yml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">如果您计划在互联网上运行容器，则必须更改这些凭据。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">域名</font></font></h2><a id="user-content-domains" class="anchor" aria-label="永久链接：域名" href="#domains"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">默认情况下，完整的 Fusio 项目可以托管在单个域上。</font><font style="vertical-align: inherit;">在此设置中，您的 API 在根目录提供服务，开发人员门户和后端应用程序直接从 /apps 文件夹提供服务。</font><font style="vertical-align: inherit;">此设置很容易使用，因为它不需要配置。</font><font style="vertical-align: inherit;">如果您想在生产环境中运行 Fusio，我们建议创建以下子域结构：</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">api.acme.com</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+仅包含为您的 API 提供服务的 Fusio，在这种情况下，您可以从 public/ 文件夹中删除 apps/ 文件夹</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">developer.acme.com</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+包含外部开发人员可以注册的开发人员门户应用程序</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fusio.acme.com</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+可选的后端应用程序，您可以在其中管理 Fusio 实例。</font><font style="vertical-align: inherit;">您也可以将其托管在一个完全独立的内部域上，后端应用程序只需要访问 Fusio API。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">当然这只是一个建议，您可以自由选择您喜欢的域名。</font></font></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h1><a id="user-content-documentation" class="anchor" aria-label="永久链接：文档" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请查看我们的官方文档网站，我们捆绑了所有文档资源：
+ </font></font><a href="https://docs.fusio-project.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https ://docs.fusio-project.org/</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font></h1><a id="user-content-support" class="anchor" aria-label="永久链接： 支持" href="#support"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">晋升</font></font></h2><a id="user-content-promotion" class="anchor" aria-label="永久链接：促销" href="#promotion"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您是博主或杂志，如果您愿意报道&ZeroWidthSpace;&ZeroWidthSpace; Fusio，我们将非常高兴。</font><font style="vertical-align: inherit;">请查看我们的</font></font><a href="https://www.fusio-project.org/about" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“关于”页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的“媒体”部分，下载官方图标集。</font><font style="vertical-align: inherit;">如果您有任何疑问，请直接给我们留言，以便我们帮助您创建精彩的内容。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">咨询</font></font></h2><a id="user-content-consulting" class="anchor" aria-label="永久链接：咨询" href="#consulting"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您是公司或自由职业者，并且想要获取如何使用 Fusio 的详细信息，您可以联系我们进行咨询。</font><font style="vertical-align: inherit;">在研讨会中，我们尝试找到如何使用/集成 Fusio 的最佳方法，我们还尝试解释功能并回答您的问题。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">捐款</font></font></h2><a id="user-content-donations" class="anchor" aria-label="永久链接：捐款" href="#donations"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果该项目可以帮助您产生收入，或者一般来说如果您想支持该项目，请查看我们存储库中的捐赠选项。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伙伴</font></font></h2><a id="user-content-partner" class="anchor" aria-label="永久链接： 合作伙伴" href="#partner"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以下列表显示了Fusio项目的所有合作伙伴。</font><font style="vertical-align: inherit;">我们要感谢每一位支持我们实现将 API 开发提升到新水平的愿景的合作伙伴。</font><font style="vertical-align: inherit;">如果您有兴趣在这里列出，请随时赞助我们的项目。</font></font></p>
+<a href="https://jb.gg/OpenSourceSupport" rel="nofollow">
+<img src="https://camo.githubusercontent.com/830c8bd550b48827eb78c6ce81a378aeed729d8db4a8bdd460ee500db7bda0d8/68747470733a2f2f7265736f75726365732e6a6574627261696e732e636f6d2f73746f726167652f70726f64756374732f636f6d70616e792f6272616e642f6c6f676f732f6a625f6265616d2e737667" data-canonical-src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" style="max-width: 100%;">
 </a>
+</article></div>
